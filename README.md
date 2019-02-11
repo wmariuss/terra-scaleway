@@ -1,4 +1,4 @@
-# tf-scaleway
+# terraform-scaleway-compute
 
 Manage Scaleway compute resource.
 
@@ -51,9 +51,11 @@ Output
 # Example main.tf
 
 module "compute" {
+  // From Github repo
   # source = "git::https://github.com/wmariuss/tf-scaleway.git//compute?ref=v1.0"
-  source  = "wmariuss/scaleway/compute"
-  version = "v1.0.0"
+  // From Terraform registry
+  source  = "wmariuss/compute/scaleway"
+  version = "1.0.0"
 
   name               = "test-compute-terraform"
   number_of_servers  = 1
