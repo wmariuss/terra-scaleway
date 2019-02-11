@@ -8,6 +8,7 @@ Input
 
 | Parameter | Default value | Description | Type  | Required | Example |
 |-----------|---------------|-------------|-------|----------|---------|
+| source | | Module source | String | Yes | |
 | region | par1 | Region you want to create the server | String | No | par1 and ams1 |
 | number_of_servers | 1 | How many servers you want to create | Number | No | |
 | name | | Give a name for the server(s) | String | Yes | |
