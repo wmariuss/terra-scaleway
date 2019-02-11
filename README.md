@@ -4,7 +4,7 @@ Terraform modules for Scaleway Cloud Platform.
 
 ## Docs
 
-How to use __tf_scaleway__ check [here](docs/)
+How to use tf_scaleway check [here](docs/)
 
 ## Authors
 
