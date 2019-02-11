@@ -106,7 +106,7 @@ All tests
 One test
 
 * `cd tests/`
-* `go test -v -run TestTerraformBasicExample # TestTerraformBasicExample = name of function`
+* `go test -v -run TestTerraformComputeScalewayExample # TestTerraformComputeScalewayExample = name of function`
 
 ## Authors
 

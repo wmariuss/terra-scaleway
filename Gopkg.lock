@@ -10,19 +10,22 @@
   version = "v1.1.1"
 
 [[projects]]
-  digest = "1:f825c8baeec18eb45315c69ba2de45054784b7ad7507a2b61a4e14901ab5d05b"
+  digest = "1:2d7322047a15d6374586cd6f384b7a6ef0d9513e53702ec066417214cecbd187"
   name = "github.com/gruntwork-io/terratest"
   packages = [
     "modules/collections",
+    "modules/customerrors",
+    "modules/files",
     "modules/logger",
+    "modules/random",
     "modules/retry",
     "modules/shell",
     "modules/ssh",
     "modules/terraform",
   ]
   pruneopts = "UT"
-  revision = "24df87283747f0572bbd678f4a4c64f7c272fba8"
-  version = "v0.11.0"
+  revision = "425f7f1c2c72c607142c67aee02d1c14f874cf0a"
+  version = "v0.13.24"
 
 [[projects]]
   digest = "1:0028cb19b2e4c3112225cd871870f2d9cf49b9b4276531f03438a88e94be86fe"
@@ -69,6 +72,7 @@
   analyzer-name = "dep"
   analyzer-version = 1
   input-imports = [
+    "github.com/gruntwork-io/terratest/modules/random",
     "github.com/gruntwork-io/terratest/modules/terraform",
     "github.com/stretchr/testify/assert",
   ]
