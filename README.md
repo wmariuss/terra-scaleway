@@ -52,7 +52,7 @@ Output
 
 module "compute" {
   // From Github repo
-  # source = "git::https://github.com/wmariuss/tf-scaleway.git//compute?ref=v1.0"
+  # source = "git::https://github.com/wmariuss/terraform-scaleway-compute.git//compute?ref=v1.0.0"
   // From Terraform registry
   source  = "wmariuss/compute/scaleway"
   version = "1.0.0"
