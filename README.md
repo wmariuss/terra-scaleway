@@ -51,7 +51,9 @@ Output
 # Example main.tf
 
 module "compute" {
-  source = "git::https://github.com/wmariuss/tf-scaleway.git//compute?ref=v1.0"
+  # source = "git::https://github.com/wmariuss/tf-scaleway.git//compute?ref=v1.0"
+  source  = "wmariuss/scaleway/compute"
+  version = "v1.0.0"
 
   name               = "test-compute-terraform"
   number_of_servers  = 1
