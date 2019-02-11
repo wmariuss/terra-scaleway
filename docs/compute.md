@@ -11,11 +11,11 @@ Input
 | region | par1 | Region you want to create the server | String | No | par1 and ams1 |
 | number_of_servers | 1 | How many servers you want to create | Number | No | |
 | name | | Give a name for the server(s) | String | Yes | |
-| server_type | VC1S | Type for the server you want to create | String | No | curl -H "X-Auth-Token: "<YOUR_API_TOKEN_HERE" https://cp-par1.scaleway.com/images |
+| server_type | VC1S | Type for the server you want to create | String | No | Check scaleway API |
 | tags | | Give tags for server(s) | List | No | |
 | additional_volumes | | Create additional volumes and attach them to the server(s) | Map | No | Check code example |
 | image_architecture | x86_64 | The image architecture you want to use to create the server(s) | String | No | arm or x86_64 |
-| image_name | Ubuntu Xenial | Image name or name of os you want to use for the server(s) | String | No | curl -H "X-Auth-Token: "<YOUR_API_TOKEN_HERE" https://cp-par1.scaleway.com/images |
+| image_name | Ubuntu Xenial | Image name or name of os you want to use for the server(s) | String | No | Check scaleway API |
 | security_group_name | | Give a name for security group | String | No | |
 | security_group_desc | Managed by Terraform | Add description for security group | String | No | |
 | enable_ip | true | Provides IP(s) for server(s) | Bool | No | |
