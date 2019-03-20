@@ -1,9 +1,9 @@
 // Example create scaleway server
 
 module "compute" {
-  source = "../../modules/compute/"
+  source = "../../"
 
-  name               = "test-compute-terraform"
+  name               = "terraform-compute-test"
   number_of_servers  = 1
   region             = "ams1"
   server_type        = "VC1S"

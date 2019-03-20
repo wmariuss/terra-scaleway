@@ -14,14 +14,14 @@ func TestTerraformComputeScalewayExample(t *testing.T) {
 	t.Parallel()
 
 	approvedRegions := "ams1"
-	expectedName := fmt.Sprintf("test-compute-terraform-%s", random.UniqueId())
+	expectedName := fmt.Sprintf("terraform-compute-test-%s", random.UniqueId())
 	expectedArch := "x86_64"
 	expectedServerType := "VC1S"
 	expectedImg := "Ubuntu Xenial"
 
 	terraformOptions := &terraform.Options{
 		// The path to where our Terraform code is located
-		TerraformDir: "../modules/compute",
+		TerraformDir: "../",
 
 		// Variables to pass to our Terraform code using -var options
 		Vars: map[string]interface{}{

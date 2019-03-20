@@ -2,7 +2,8 @@
 // Marius Stanca <me@marius.xyz>
 
 provider "scaleway" {
-  region = "${var.region}"
+  version = ">= 1.9.1, <= 1.9.1"
+  region  = "${var.region}"
 }
 
 // Create VM(s)

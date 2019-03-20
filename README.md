@@ -19,22 +19,22 @@ Input
 | Parameter | Default value | Description | Type  | Required | Example |
 |-----------|---------------|-------------|-------|----------|---------|
 | source | | Module source | String | Yes | |
-| region | par1 | Region you want to create the server | String | No | par1 and ams1 |
-| number_of_servers | 1 | How many servers you want to create | Number | No | |
+| region | `par1` | Region you want to create the server | String | No | par1 and ams1 |
+| number_of_servers | `1` | How many servers you want to create | Number | No | |
 | name | | Give a name for the server(s) | String | Yes | |
-| server_type | VC1S | Type for the server you want to create | String | No | Check scaleway API |
+| server_type | `VC1S` | Type for the server you want to create | String | No | Check scaleway API |
 | tags | | Give tags for server(s) | List | No | |
 | additional_volumes | | Create additional volumes and attach them to the server(s) | Map | No | Check code example |
-| image_architecture | x86_64 | The image architecture you want to use to create the server(s) | String | No | arm or x86_64 |
-| image_name | Ubuntu Xenial | Image name or name of os you want to use for the server(s) | String | No | Check scaleway API |
+| image_architecture | `x86_64` | The image architecture you want to use to create the server(s) | String | No | arm or x86_64 |
+| image_name | `Ubuntu Xenial` | Image name or name of os you want to use for the server(s) | String | No | Check scaleway API |
 | security_group_name | | Give a name for security group | String | No | |
-| security_group_desc | Managed by Terraform | Add description for security group | String | No | |
-| enable_ip | true | Provides IP(s) for server(s) | Bool | No | |
-| default_security | true | Set security group as default | Bool | No | |
-| create_default_security_group | true | Apply default security group | Bool | No | |
+| security_group_desc | `Managed by Terraform` | Add description for security group | String | No | |
+| enable_ip | `true` | Provides IP(s) for server(s) | Bool | No | |
+| default_security | `true` | Set security group as default | Bool | No | |
+| create_default_security_group | `true` | Apply default security group | Bool | No | |
 | additional_security_rules | | Add additional rules to the security group | Map | No | Check code example |
-| enable_ipv6 | false |Enable IPv6 | Bool | No | |
-| server_state | running | The state of the server | String | No | stopped and running |
+| enable_ipv6 | `false` |Enable IPv6 | Bool | No | |
+| server_state | `running` | The state of the server | String | No | stopped and running |
 
 Output
 
@@ -52,7 +52,7 @@ Output
 
 module "compute" {
   // From Github repo
-  # source = "git::https://github.com/wmariuss/terraform-scaleway-compute.git//modules/compute?ref=v1.0.0"
+  # source = "git::https://github.com/wmariuss/terraform-scaleway-compute.git?ref=v1.0.1"
   // From Terraform registry
   source  = "wmariuss/compute/scaleway"
   version = "1.0.0"
@@ -110,4 +110,4 @@ One test
 
 ## Authors
 
-Marius Stanca <me@marius.xyz>
+* [Marius Stanca](mailto:me@marius.xyz)
