@@ -16,9 +16,9 @@ module "compute" {
   #   "0" = ["volume1", 50, "l_ssd"]
   # }
 
- // Add rules to the security group
- additional_security_rules = {
-   "0" = ["accept", "inbound", "0.0.0.0/0", "TCP", 80],
-   "1" = ["accept", "inbound", "0.0.0.0/0", "TCP", 443]
- }
+  // Add rules to the security group
+  additional_security_rules = {
+    "0" = ["accept", "inbound", "0.0.0.0/0", "TCP", 80],
+    "1" = ["accept", "inbound", "0.0.0.0/0", "TCP", 443]
+  }
 }
