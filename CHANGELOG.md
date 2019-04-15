@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.1.0
+
+* Add support for provisioner
+
 ## v1.0.1
 
 * Give a basic strcuture of module
