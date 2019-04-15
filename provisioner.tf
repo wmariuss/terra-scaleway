@@ -11,6 +11,7 @@ resource "null_resource" "provisioner" {
     host        = "${var.provisioner_internal_execution ? element(scaleway_server.this.*.private_ip, count.index) : element(scaleway_server.this.*.public_ip, count.index)}"
     user        = "${var.provisioner_user}"
     private_key = "${file(var.provisioner_private_key)}"
+    timeout     = "2m"
   }
 
   provisioner "file" {
