@@ -80,3 +80,40 @@ variable "server_state" {
   description = "The state of the server. Values are stopped and running"
   default     = "running"
 }
+
+// Provisioner
+variable "enable_provisioner" {
+  description = "Enable provisioning"
+  default     = false
+}
+
+variable "provisioner_internal_execution" {
+  description = "Should be true if you want to execute the provisioner in a private network"
+  default     = false
+}
+
+variable "provisioner_user" {
+  description = "ssh user to start provisioning"
+  default     = "ubuntu"
+}
+
+variable "provisioner_private_key" {
+  description = "ssh private key to start provisioning"
+  default     = ""
+}
+
+variable "provisioner_source_file" {
+  description = "Source script file or path for provisioning"
+  default     = ""
+}
+
+variable "provisioner_destination_file" {
+  description = "Destination script file or path for provisioning"
+  default     = ""
+}
+
+variable "provisioner_remote_cmds" {
+  type        = "list"
+  description = "List with shell commands to execute"
+  default     = []
+}

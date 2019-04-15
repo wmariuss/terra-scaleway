@@ -35,6 +35,13 @@ Input
 | additional_security_rules | | Add additional rules to the security group | Map | No | Check code example |
 | enable_ipv6 | `false` |Enable IPv6 | Bool | No | |
 | server_state | `running` | The state of the server | String | No | stopped and running |
+| enable_provisioner | `false` | Enable provisioning | Bool | No | |
+| provisioner_internal_execution | `false` | Should be true if you want to execute the provisioner in a private network | Bool | No | |
+| provisioner_user | `ubuntu` | ssh user to start provisioning | String | No | |
+| provisioner_private_key | | ssh private key to start provisioning | String | No | |
+| provisioner_source_file | | Source script file or path for provisioning | String | No | |
+| provisioner_destination_file | | Destination script file or path for provisioning | String | No | |
+| provisioner_remote_cmds | | List with shell commands to execute | List | No | |
 
 Output
 
@@ -51,11 +58,8 @@ Output
 # Example main.tf
 
 module "compute" {
-  // From Github repo
-  # source = "git::https://github.com/wmariuss/terraform-scaleway-compute.git?ref=v1.0.1"
-  // From Terraform registry
-  source  = "wmariuss/compute/scaleway"
-  version = "1.0.0"
+  source  = "wmariuss/compute/scaleway" # or git::https://github.com/wmariuss/terraform-scaleway-compute.git?ref=v1.0.1
+  version = "1.0.1" # not necessary if you are using git as source
 
   name               = "test-compute-terraform"
   number_of_servers  = 1
@@ -66,15 +70,15 @@ module "compute" {
   tags               = ["Terraform"]
 
   // Depends of server_type, scaleway allow you to attach a limited number of valumes or size
-  # additional_volumes = {
-  #   "0" = ["volume1", 50, "l_ssd"]
-  # }
+  additional_volumes = {
+    "0" = ["volume1", 50, "l_ssd"]
+  }
 
- // Add rules to the security group
- additional_security_rules = {
-   "0" = ["accept", "inbound", "0.0.0.0/0", "TCP", 80],
-   "1" = ["accept", "inbound", "0.0.0.0/0", "TCP", 443]
- }
+  // Add rules to the security group
+  additional_security_rules = {
+    "0" = ["accept", "inbound", "0.0.0.0/0", "TCP", 80],
+    "1" = ["accept", "inbound", "0.0.0.0/0", "TCP", 443]
+  }
 }
 
 # Example output.tf

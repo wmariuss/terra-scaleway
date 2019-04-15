@@ -1,8 +1,8 @@
-// compute module
+// scaleway compute module
 // Marius Stanca <me@marius.xyz>
 
 provider "scaleway" {
-  version = ">= 1.9.1, <= 1.9.1"
+  version = ">= 1.9.2, <= 1.9.2"
   region  = "${var.region}"
 }
 
@@ -17,6 +17,10 @@ resource "scaleway_server" "this" {
   state          = "${var.server_state}"
   security_group = "${element(scaleway_security_group.default.*.id, count.index)}"
   tags           = "${var.tags}"
+
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 // Setup volume(s)
